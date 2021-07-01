@@ -18,12 +18,20 @@ const LineChart = () => {
         curve: "smooth",
       },
       title: {
-        text: "Stock Movements",
+        text: "Stock Price Movement",
         align: "left",
+        style: {
+          fontSize: "16px",
+          color: "#666",
+        },
       },
       colors: ["gray"],
       xaxis: {
+        name: "Dates",
         type: "datetime",
+        title: {
+          text: "Dates",
+        },
         categories: [
           "2021-06-22",
           "2021-06-23",
@@ -32,39 +40,93 @@ const LineChart = () => {
           "2021-06-26",
           "2021-06-27",
           "2021-06-28",
+          "2021-06-29",
+          "2021-06-30",
+          "2021-07-01",
+          "2021-07-02",
+          "2021-07-03",
         ],
+        // labels: {
+        //   formatter: function (value, timestamp, opts) {
+        //     return opts.dateFormatter(new Date(timestamp), "dd MMM");
+        //   },
+        // },
       },
       yaxis: {
         min: 0,
+        title: {
+          text: "Price",
+        },
       },
 
       markers: {
         discrete: [
           {
             seriesIndex: 0,
-            dataPointIndex: 1,
+            dataPointIndex: 0,
+            fillColor: "blue",
             size: 5,
-
-            fillColor: "red",
             strokeColor: "#FFF",
+          },
+          {
+            seriesIndex: 0,
+            dataPointIndex: 2,
+            fillColor: "blue",
+            size: 5,
+            strokeColor: "#FFF",
+          },
+          {
+            seriesIndex: 0,
+            dataPointIndex: 5,
+            fillColor: "blue",
+            size: 5,
+            strokeColor: "#FFF",
+          },
+          {
+            seriesIndex: 0,
+            dataPointIndex: 5,
+            fillColor: "blue",
+            size: 5,
+            strokeColor: "#FFF",
+          },
+          {
+            seriesIndex: 0,
+            dataPointIndex: 9,
+            fillColor: "blue",
+            strokeColor: "#FFF",
+            size: 5,
           },
           {
             seriesIndex: 0,
             dataPointIndex: 3,
             fillColor: "red",
             strokeColor: "#FFF",
-            size: 4,
+            size: 5,
           },
           {
             seriesIndex: 0,
-            dataPointIndex: 5,
+            dataPointIndex: 7,
             fillColor: "red",
             strokeColor: "#FFF",
-            size: 4,
+            size: 5,
+          },
+          {
+            seriesIndex: 0,
+            dataPointIndex: 1,
+            fillColor: "red",
+            strokeColor: "#FFF",
+            size: 5,
+          },
+          {
+            seriesIndex: 0,
+            dataPointIndex: 10,
+            fillColor: "red",
+            strokeColor: "#FFF",
+            size: 5,
           },
         ],
-        colors: ["#1A73E8"],
-        size: 5,
+        size: 0.001,
+        fillColor: "grey",
       },
 
       grid: {
@@ -87,8 +149,8 @@ const LineChart = () => {
 
     series: [
       {
-        name: "Stock Movements",
-        data: [10, 4, 3, 6, 9, 5, 7],
+        name: "Price",
+        data: [9, 5, 7, 2, 8, 10, 4, 3, 6, 9, 5, 7],
       },
     ],
   });

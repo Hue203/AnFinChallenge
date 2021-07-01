@@ -1,12 +1,15 @@
 import "./App.css";
-
 import LineChart from "./components/LineChart";
+import PublicNavBar from "./components/PublicNavBar";
 
 function App() {
   return (
-    <div className="App">
-      <LineChart />
-    </div>
+    <>
+      <PublicNavBar />
+      <div className="container">
+        <LineChart />
+      </div>
+    </>
   );
 }
 
