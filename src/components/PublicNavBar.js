@@ -4,8 +4,8 @@ import { Navbar } from "react-bootstrap";
 const PublicNavBar = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">AnFin</Navbar.Brand>
+      <Navbar bg="dark" variant="dark" className="nav">
+        <Navbar.Brand>AnFin Challenge</Navbar.Brand>
       </Navbar>
     </>
   );
